@@ -1,0 +1,26 @@
+Clase 2:
+Qué tipo de datos usamos para representar un texto?
+*String
+
+Clase 3: 
+Cuál es la diferencia entre un dato del tipo float y double?
+*float es de precisión simple (hasta 7 dígitos), y double es de presición doble (hasta 15 dígitos)
+
+Puedo guardar un número en un string?
+*Si se puede, pero será considerado sólo como texto
+
+Clase 4:
+Para qué sirve la sentencia switch? 
+*La sentencia switch se utiliza ante decisiones de múltiples opciones y verifica la igualdad. 
+*Permite organizar bloques de código de forma que se ejecute el correspondiente bloque en el cual coincida cierto caso con el valor.  
+*A diferencia de sentencia if-else if-else, en los casos switch case no se pueden usar expresiones y operadores lógicos en la verificación 
+de igualdad con la variable. 
+
+Clase 5:
+En qué casos es más conveniente utilizar un bucle 'for' en lugar de 'while'?
+*El bucle for se debe utilizar para repetir/iterar una determinada cantidad conocida de veces un fragmento de código, 
+y también para recorrer un objeto iterable.
+
+Qué es la interpolación de strings (String interpolation)?
+*Es la inclusión dentro de un string, del valor de una variable o resultado de una expresión entre llaves {}, utilizando 
+antes de la primer " un signo $ como simbología. Proporciona una sintaxis más legible que la concatenación.
