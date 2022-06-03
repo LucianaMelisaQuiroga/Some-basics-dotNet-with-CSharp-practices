@@ -230,7 +230,7 @@ for (int i = 0; i < arrayImplicitoStrings.Length; i++)
 }
 
 //foreach para recorrer arrays implícitos. Menos uso de código para recorrerlo
-foreach (string var in arrayImplicitoStrings)
+foreach (string item in arrayImplicitoStrings)
 {
-    Console.WriteLine(var);
+    Console.WriteLine(item);
 }
