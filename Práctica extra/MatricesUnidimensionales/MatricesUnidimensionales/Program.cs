@@ -14,10 +14,12 @@ autos[2] = "BMW";
 //autos[3] = "Toyota";
 //Console.WriteLine(autos[0]); //El índice 3 al estar fuera de rango tirará error
 Console.WriteLine(autos[0]); //imprime el primer elemento que corresponde a la primer posición
+Console.WriteLine("==============================================");
 
 //o puedo declarar e inicializar en el mismo momento
 string[] cars = { "Volvo", "Fiat", "BMW" };
 Console.WriteLine(cars[0]); //imprime el primer elemento que corresponde a la primer posición
+Console.WriteLine("==============================================");
 
 //o declarar la matriz y luego asignarle los valores de cada elemento de a uno
 string[] colores = new string[3]; //se declaran cuántas posiciones tendrá 3 posiciones->índices 0, 1, 2
@@ -29,6 +31,7 @@ Console.WriteLine($"En el índice 0 usted ingresó {colores[0]}"); //imprime el 
 /************Cambio el valor de uno de los elementos*********/
 colores[0] = "Violeta"; //se reasigna el valor
 Console.WriteLine($"Ahora en el índice 0 le asignó el color {colores[0]}");
+Console.WriteLine("==============================================");
 
 /*******************Matriz unidimensional con inputs**********/
 int[] numeros = new int[3]; //se declaran cuántas posiciones tendrá 3 posiciones->índices 0, 1, 2
@@ -37,7 +40,7 @@ int acumulador = 0; //Declaro e inicializo la variable acumulador para poder sum
 //Ciclo for para ingresar cada elemento a través de inputs 
 for (int i = 0; i < numeros.Length; i++)
 {
-    Console.WriteLine($"Ingrese el número de la posición {i + 1}:");
+    Console.WriteLine($"Ingrese el número de la posición {i + 1} del array que tiene {numeros.Length} elementos:");
     numeros[i] = int.Parse(Console.ReadLine());
     //Acumula la suma de todos los elementos del array/matriz unidimensional
     acumulador += numeros[i];
@@ -51,7 +54,7 @@ Console.WriteLine($"La suma de los elementos es: {acumulador}");
 
 //Imprimo la cantidad de posiciones del array
 Console.WriteLine($"El array tiene {numeros.Length} posiciones");
-
+Console.WriteLine("==============================================");
 
 /*******************Matriz unidimensional con inputs**********/
 //La diferencia con el anterior, es que imprimo todos los elementos juntos una vez que fueron ingresados
@@ -61,7 +64,7 @@ int suma = 0; //Declaro e inicializo la variable acumulador para poder sumar los
 //Ciclo for para ingresar cada elemento a través de inputs 
 for (int i = 0; i < numbers.Length; i++)
 {
-    Console.WriteLine($"Ingrese el número de la posición {i + 1}:");
+    Console.WriteLine($"Ingrese el número de la posición {i + 1} del array que tiene {numbers.Length} posiciones:");
     numbers[i] = int.Parse(Console.ReadLine());
     //Acumula la suma de todos los elementos del array/matriz unidimensional
     suma += numbers[i];
@@ -78,7 +81,7 @@ for (int i = 0; i < numbers.Length; i++)
     //Imprimo los números ingresados
     Console.WriteLine($"En el índice {i} usted ingresó {numbers[i]}");
 }
-
+Console.WriteLine("==============================================");
 
 /***********Valores por defecto en arrays/vectores**************/
 
@@ -119,11 +122,11 @@ myIntArray[3] = 4;
 myIntArray[4] = 5;
 Console.WriteLine(myIntArray[2]);
 Console.WriteLine(myIntArray[3]);
-Console.WriteLine();
+Console.WriteLine("===============================================");
 
 
 /***********Arrays/vectores - Uso del método .Length***********************/
-/
+
 /*Creo un array de 5 elementos con inputs por pantalla, imprimo los valores 
  y calculo el promedio del array*/
 Console.WriteLine("===============================================");
@@ -136,7 +139,7 @@ float promedio = 0;
 
 for (int i = 0; i < numerosArray.Length; i++)
 {
-    Console.WriteLine($"Ingrese el valor para el {i + 1}° elemento del array");
+    Console.WriteLine($"Ingrese el valor para el {i + 1}° elemento del array que tiene {numerosArray.Length} posiciones");
     numerosArray[i] = int.Parse(Console.ReadLine());
     sumaArray += numerosArray[i];
 }
@@ -170,7 +173,7 @@ float promedio_ = 0;
 
 for (int i = 0; i < numerosArray_.Length; i++)
 {
-    Console.WriteLine($"Ingrese el valor para el {i + 1}° elemento del array");
+    Console.WriteLine($"Ingrese el valor para el {i + 1}° elemento del array que tiene {numerosArray_.Length} posiciones");
     numerosArray_[i] = int.Parse(Console.ReadLine());
     sumaArray_ += numerosArray_[i];
 }
@@ -215,19 +218,6 @@ for (int i = 0; i < arrayImplicitoDouble.Length; i++)
 {
     Console.WriteLine($"El {i + 1}° valor es {arrayImplicitoDouble[i]}");
 }
-
-
-//Array implícito de números doubles con enteros
-//Con que haya 1 sólo double en un array de integers, ese o convierte en un array de doubles
-var arrayImplicitoDoubleInt = new[] { 2, 4.53, 5, 7 };
-
-//Para recorrer el array implícito
-Console.WriteLine("Elementos en array implícito de doubles y enteros:");
-for (int i = 0; i < arrayImplicitoDoubleInt.Length; i++)
-{
-    Console.WriteLine($"El {i + 1}° valor es {arrayImplicitoDoubleInt[i]}");
-}
-
 
 //Array implícito de strings
 var arrayImplicitoStrings = new[] { "Lunes", "Martes", "Miércoles", "Jueves", "Viernes" };
