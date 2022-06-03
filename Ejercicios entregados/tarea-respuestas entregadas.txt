@@ -24,3 +24,83 @@ y también para recorrer un objeto iterable.
 Qué es la interpolación de strings (String interpolation)?
 *Es la inclusión dentro de un string, del valor de una variable o resultado de una expresión entre llaves {}, utilizando 
 antes de la primer " un signo $ como simbología. Proporciona una sintaxis más legible que la concatenación.
+
+Clase 9
+Pregunta 1: Cómo es el nombre de la clase para obtener datos aleatorios numéricos?
+
+Clase Random
+
+Pregunta 2: Cómo le determinanos el tipo de datos para las listas?
+
+Respuesta: entre comillas angulares <tipoDato> quedando instanciada la lista de la siguiente manera:
+List<tipoDato> nombreLista = new List<tipoDato>();
+
+Clase 10
+Estructuras de datos
+
+Pregunta 1: Qué son count y capacity, qué significan esas propiedades en una lista?
+La propiedad .Count es una propiedadad de las listas que permite obtener el número de elementos que realmente contiene. 
+
+La Propiedad .Capacity es otra propiedad de las listas que permite obtener o establecer el número total de 
+elementos que la estructura de datos interna puede almacenar antes de que pueda ser modificado el tamaño. Al modificarse 
+el tamaño de la lista, capacity aumenta en un nuevo número de posibles elementos a almacenar.
+
+Count siempre es <= a Capacity.
+
+Pregunta 2: que son las estructuras de datos LIFO y FIFO? Dar un ejemplo de cada una. 
+
+LIFO Stack(Pilas): es una colección de instancias de tamaño variable de último en entrar, 
+primero en salir
+Ejemplo:
+
+//Instancio una pila
+var semaforoColores = new Stack<string>();
+
+//Agrego elementos - "Push" inserta un elemento en la parte superior de la pila/stack
+semaforoColores.Push("Rojo");
+semaforoColores.Push("Amarillo");
+semaforoColores.Push("Verde");
+
+//Con "Pop" elimino un elemento de la parte superior de la pila/stack
+Console.WriteLine(semaforoColores.Pop());
+Console.WriteLine(semaforoColores.Pop());
+Console.WriteLine(semaforoColores.Pop());
+
+
+FIFO Queue(Colas): es una colección de objetos de tipo primero en entrar, primero en salir
+El tipo Queue que nos permite almacenar información en colas de tipo FIFO.
+Ejemplo:
+
+//Instancio una cola
+var semaforoColores = new Queue<string>();
+
+//El método "Enqueue" se utiliza para poner a los elementos en la cola
+semaforoColores.Enqueue("Rojo");
+semaforoColores.Enqueue("Amarillo");
+semaforoColores.Enqueue("Verde");
+
+//El método "Dequeue" se utiliza para eliminar el primer elemento ingresado en la cola
+Console.WriteLine(semaforoColores.Dequeue());
+Console.WriteLine(semaforoColores.Dequeue());
+Console.WriteLine(semaforoColores.Dequeue());
+
+Clase 11
+POO - Programación orientada a objetos
+
+Pregunta 1: Cuáles son las 3 estructuras lógicas que plantea el teorema de la programación estructurada?
+
+Secuencial: ejecución con un orden de una instrucción tras otra.
+
+Selección: ejecución de una de dos instrucciones según el valor de una variable booleana. 
+En C#: if, if-else, if-else if-else, switch.
+
+Iteración: ejecución de una instrucción  mientras una variable booleana sea 'verdadera'. Esta 
+estructura lógica también se conoce como ciclo o bucle.
+En C#: for, while, do while, foreach. 
+
+Pregunta 2: Cuál es la diferencia entre instancia y clase?
+
+Clase: es la estructura de un objeto compuesta por un conjunto de atributos y métodos.
+Instancia: es el resultado de aplicarle a un objeto la estructura de la clase. Es decir 
+los métodos y a esos atributos asignarles valor, lo que se conoce como instanciar un objeto. 
+Una clase puede tener varias intancias, pero cada instancia/objeto es única.
