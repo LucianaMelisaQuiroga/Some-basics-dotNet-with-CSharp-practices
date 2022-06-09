@@ -19,8 +19,8 @@ Escribe la respuesta a la pregunta 2 - De qué manera recorro una matriz de 2 di
 
 Respuesta:
 La manera de recorrer una matriz de dos dimensiones es mediante un for anidado (con otro for). 
-Con el primer for se ingresa a la 1° columna, y con el 2° for anidado se recorren todos los elementos 
-de cada fila de la columna. Luego vuelve al 1° for y pasa a la siguiente columna, el 2° for recorre 
-todos los elementos de las filas de esa columna, y así sucesivamete. Cuando se vuelve a evaluar la 
-condición del 1° for, luego de ya haber recorrido todos los elementos de la matriz, el bloque de código 
-finaliza*/
+Con el primer for se ingresa al 1° elemento de índice [0,0], y con el 2° for anidado se recorren todos 
+los elementos de la fila, que corresponden a cada columna. Luego vuelve al 1° for y pasa a la siguiente 
+fila, el 2° for recorre todos los elementos de la fila que corresponden a esas columnas, y así sucesivamete. 
+Cuando se vuelve a evaluar la condición del 1° for, luego de ya haber recorrido todos los elementos de la 
+matriz, el bloque de código finaliza*/
