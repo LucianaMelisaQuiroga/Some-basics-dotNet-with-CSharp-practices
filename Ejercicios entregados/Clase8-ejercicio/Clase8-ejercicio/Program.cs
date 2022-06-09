@@ -25,9 +25,6 @@ int columnas = int.Parse(Console.ReadLine());
 //1) Crear una matriz de dos dimensiones de tipo int llamada números
 int[,] numeros = new int[filas, columnas];
 
-//Inicializo el acumulador para luego calcular los promedios
-double sumaNumeros = 0;
-
 /*Para especificar la condición en el for calculo cuál es su length
 tanto para filas como para columnas ingresadas por el usuario*/
 
@@ -41,26 +38,55 @@ int lengthColumnas = numeros.GetUpperBound(1) + 1;
 double[] promedios = new double[lengthColumnas];
 
 //4) Recorrer la matriz para su carga con elementos de tipo int
-for (int columna = 0; columna < lengthColumnas; columna++)
+for (int fila = 0; fila < lengthFilas; fila++)
 {
-    Console.WriteLine($"Ingrese los valores para la {columna + 1}° columna");
-
-    for (int fila = 0; fila < lengthFilas; fila++)
+    Console.WriteLine($"Para los valores de la {fila + 1}° fila:");
+    for (int columna = 0; columna < lengthColumnas; columna++)
     {
-        Console.WriteLine($"Ingrese el valor de la {fila + 1}° fila");
+        Console.WriteLine($"Ingrese el valor de la {columna + 1}° columna");
         numeros[fila, columna] = int.Parse(Console.ReadLine());
-        sumaNumeros += numeros[fila, columna];
     }
 }
 
-//5) Recorrer la matriz para mostrar cada valor de la matriz
+//6) Calcular el promedio de cada columna y asignarlo a la posición correspondiente dentro del vector promedios
 for (int columna = 0; columna < lengthColumnas; columna++)
 {
-    Console.WriteLine($"Valores de la {columna + 1}° columna de la matriz:");
-
+    //Inicializo fuera del 2° bucle para que con cada iteración el acumuladorr vuelva a cero
+    double sumaNumeros = 0;
     for (int fila = 0; fila < lengthFilas; fila++)
     {
-        Console.WriteLine($"El {fila + 1}° valor es {numeros[fila, columna]}");
+        sumaNumeros += numeros[fila, columna];
+        promedios[columna] = sumaNumeros / lengthFilas;
     }
-    Console.WriteLine("====================================");
 }
+
+Console.WriteLine();
+Console.WriteLine("----------------------------------------------");
+
+//5) Recorrer la matriz para mostrar cada valor
+Console.WriteLine($"La matriz ingresada de {lengthFilas} filas y {lengthColumnas} columnas es:");
+Console.WriteLine();
+
+for (int fila = 0; fila < lengthFilas; fila++)
+{
+    for (int columna = 0; columna < lengthColumnas; columna++)
+    {
+        Console.Write($"{numeros[fila, columna]:00} | ");
+    }
+    Console.WriteLine();
+}
+
+Console.WriteLine();
+Console.WriteLine("----------------------------------------------");
+
+//7) Mostrar los promedios recorriendo el vector promedios
+Console.WriteLine("El promedio de cada columna es:");
+Console.WriteLine();
+
+for (int columna = 0; columna < lengthColumnas; columna++)
+{
+    Console.Write($"{promedios[columna]:00.00} | ");
+}
+
+Console.WriteLine();
+Console.WriteLine("----------------------------------------------");
